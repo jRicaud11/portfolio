@@ -1,0 +1,44 @@
+---
+ import download from "../../public/images/Download-01.png"
+---
+
+<a class="download--link" href="/download/Juan-Manuel-Ricaud-CV.pdf" download="Juan-Manuel-Ricaud-CV.pdf">
+  <div class="download--btn">
+    <img class="image--download" src={download}/>
+    <p>CV / Resumee </p>
+  </div>
+</a>
+
+<style>
+  .download--btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bb86fc;
+    width: 50%;
+    padding: 15px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .download--btn p{
+    font-size: 1.5em;
+    background-color: transparent;
+    margin-left: 15px;
+    color: #1d1d1dea;
+    font-weight: 600;
+  }
+
+  .download--link{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  .image--download{
+    height: 30px;
+    background-color: transparent;
+  }
+
+
+</style>

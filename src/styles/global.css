@@ -1,0 +1,14 @@
+:root{
+  --secondary-color : #bb86fc;
+  --main-color: rgb(209, 205, 205);
+  --background: #1d1d1dea;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  /* background-color: #1d1d1dea; */
+  color: var(--main-color);
+  margin: 0;
+  padding: 0;
+}
+

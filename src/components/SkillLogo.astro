@@ -1,0 +1,37 @@
+---
+export interface Props{
+  logo: string,
+  name: string
+}
+
+const {logo, name} = Astro.props as Props
+---
+
+<div class="container--logo">
+  <img class="logo" src={logo} />
+  <p class="name">{name}</p>
+</div>
+
+<style>
+  .container--logo{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 15vw;
+  }
+  
+  .name{
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: var(--background);
+  }
+
+  .logo{
+    background: transparent;
+    height: 70px;
+    width: 70px;
+    filter: brightness(85%);
+    margin: 20px 30px 20px 30px;
+  }
+</style>

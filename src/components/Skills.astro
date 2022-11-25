@@ -1,0 +1,160 @@
+---
+  import SkillLogo from "./SkillLogo.astro";
+---
+<div class="container--skills__title" id="skills">
+  <h2 class="skills--title">{"< Skills />"}</h2>
+</div>
+
+<div class="skills--container" >
+
+  <div class="container--version__control">
+    <h2 class="skills--subtitle">Version Control</h2>
+    <SkillLogo logo="../../public/images/github.png" name="Github" />
+    <SkillLogo logo="../../public/images/Git.png" name="Git" />
+  </div>
+
+  <div class="container--database">
+    <h2 class="skills--subtitle">Database</h2>
+    <SkillLogo logo="../../public/images/postgreSQL.png" name="PostgreSQL" />
+    <SkillLogo logo="../../public/images/mongodb.png" name="MongoDB" />
+  </div>
+
+  <div class="container--languages">
+    <h2 class="skills--subtitle">Scripting Languages</h2>
+      <SkillLogo logo="../../public/images/javascript.png" name="JavaScript" />
+      <SkillLogo logo="../../public/images/html.png" name="HTML" />
+      <SkillLogo logo="../../public/images/css.png" name="CSS" />
+      <SkillLogo logo="../../public/images/astro.png" name="Astro" />
+      <SkillLogo logo="../../public/images/React.png" name="ReactJs" />
+      <SkillLogo logo="../../public/images/Redux.png" name="Redux" />
+      <SkillLogo logo="../../public/images/NodeJs.png" name="NodeJS" />
+  </div>
+
+  <div class="container--frameworks">
+    <h2 class="skills--subtitle">Frameworks</h2>
+    <SkillLogo logo="../../public/images/materialui.png" name="Material UI" />
+  </div>
+
+  <div class="container--hosting">
+    <h2 class="skills--subtitle">Hosting Services</h2>
+    <SkillLogo logo="../../public/images/heroku-icon.png" name="Heroku" />
+    <SkillLogo logo="../../public/images/vercel.png" name="Vercel" />
+  </div>
+
+  <div class="container--tools">
+    <h2 class="skills--subtitle">Tools</h2>
+    <SkillLogo logo="../../public/images/trello.png" name="Trello" />
+    <SkillLogo logo="../../public/images/scrum.png" name="Scrum" />
+  </div>
+</div>
+
+
+<style>
+  .container--tools{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    width: 20vw;
+    padding: 20px;
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .container--hosting{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    width: 20vw;
+    padding: 20px;
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .container--frameworks{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    width: 20vw;
+    padding: 20px;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .container--languages{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    width: 20vw;
+    padding: 20px;
+    grid-column: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  .container--database{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    width: 20vw;
+    padding: 20px;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .container--skills__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .container--version__control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    width: 20vw;
+    padding: 20px;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .skills--subtitle{
+    color: var(--background);
+  }
+
+  .skills--container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 20vw 20vw 20vw;
+    grid-template-rows: 30vh 30vh 30vh 30vh;
+    grid-gap: 20px;
+  }
+
+  .skills--title{
+    font-size: 2em;
+    border-style: none outset outset none;
+    border-color: var(--secondary-color);
+    padding: 5px;
+  }
+
+  .skills--list{
+    display: flex;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+  }
+
+</style>
