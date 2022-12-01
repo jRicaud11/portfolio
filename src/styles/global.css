@@ -12,3 +12,19 @@
   padding: 0;
 }
 
+.section--title{
+  font-size: 2em;
+  border-style: none outset outset none;
+  border-color: var(--secondary-color);
+  padding: 5px;
+}
+
+.container--section__title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  padding-top: 7vh;  
+}
+
+
