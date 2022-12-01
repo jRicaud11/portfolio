@@ -1,0 +1,117 @@
+---
+
+import githubLogo from "/images/github-logo.png"
+import deployLogo from "/images/deploy.png"
+
+export interface Props{
+  image: string,
+  title: string,
+  description: string,
+  techs: Array<string>,
+  deploy: string,
+  github: string
+}
+
+const { image, title, description, techs, github, deploy } = Astro.props as Props
+---
+
+
+<div class="card--container">
+
+  <div class="iamge--container">
+    <img class="image" src={image} />
+  </div>
+
+  <div class="info--container"> 
+    <h2 class="title">{title}</h2>
+    <div class="container--description">
+      <p class="description">{description}</p>
+    </div>
+    <div class="container--techs">
+      {techs.map((el: string) => {
+        return <span class="span--tech">{el}</span>
+      })}
+    </div>
+    <div class="container--links">
+      <a class="link" href={github} target="_blank">
+        <img class="github--logo" src={githubLogo}>
+      </a>
+      <a class="link" href={deploy} target="_blank">
+        <img class="deploy--logo" src={deployLogo}>
+      </a> 
+    </div>
+  </div>
+</div>
+
+
+<style>
+  .card--container{
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    background-color: var(--main-color);
+    max-width: calc(60vw + 20px);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+  }
+
+  .image--container{
+    height: 100%;
+  }
+
+  .image{
+    height: 100%;
+    width: 20em;
+    
+  }
+
+  .container--links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    width: 100%;
+  }
+  
+  .link{
+    margin: 0 15px;
+  }
+  .info--container{
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .title{
+    font-size: 2.5em;
+    color: black;
+    text-align: center;
+    margin: 5px;
+  }
+
+  .description{
+    color: black;
+    padding: 5px;
+    font-size: 1.3em;
+  }
+
+  .container--techs{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .span--tech{
+    background-color: var(--background);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  .github--logo{  
+    height: 40px;
+  }
+
+  .deploy--logo{
+    height: 40px;
+  }
+</style>

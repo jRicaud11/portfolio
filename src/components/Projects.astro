@@ -1,3 +1,36 @@
-<div class="projects--container">
-  <h2>Projects</h2>
-</div>
+---
+ import { projects } from "./data/projects";
+ import ProjectCard from "./ProjectCard.astro";
+---
+
+<section class="projects--container" id="projects">
+  <div class="container--section__title">
+    <h2 class="section--title">{"< Projects />"}</h2>
+  </div>
+
+  <div class="container--cards__projects">
+    {
+      projects.map((el) => {
+        return <ProjectCard 
+          image={el.image}
+          title={el.title} 
+          description={el.description}
+          techs={el.techs}
+          deploy={el.deploy}
+          github={el.github}
+        />
+      })
+    }
+  </div>
+</section>
+
+
+<style>
+  .container--cards__projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+  }
+</style>
