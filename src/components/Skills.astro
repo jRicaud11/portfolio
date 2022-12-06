@@ -10,7 +10,7 @@ import SkillLogo from "./SkillLogo.astro";
   <div class="skills--container">
     <div class="container--version__control">
       <h2 class="skills--subtitle">Version Control</h2>
-      <SkillLogo logo="/images/github-logo.png" name="Github" />
+      <SkillLogo logo="/images/github.png" name="Github" />
       <SkillLogo logo="/images/Git.png" name="Git" />
     </div>
 
@@ -57,19 +57,20 @@ import SkillLogo from "./SkillLogo.astro";
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: var(--main-color);
+    background-color: var(--background);
     border-radius: 10px;
     width: 20vw;
     padding: 20px;
     grid-column: 1;
     grid-row: 3;
   }
+  
 
   .container--hosting {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: var(--main-color);
+    background-color: var(--background);
     border-radius: 10px;
     width: 20vw;
     padding: 20px;
@@ -81,7 +82,7 @@ import SkillLogo from "./SkillLogo.astro";
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: var(--main-color);
+    background-color: var(--background);
     border-radius: 10px;
     width: 20vw;
     padding: 20px;
@@ -93,7 +94,7 @@ import SkillLogo from "./SkillLogo.astro";
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: var(--main-color);
+    background-color: var(--background);
     border-radius: 10px;
     width: 20vw;
     padding: 20px;
@@ -106,7 +107,7 @@ import SkillLogo from "./SkillLogo.astro";
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: var(--main-color);
+    background-color: var(--background);
     border-radius: 10px;
     width: 20vw;
     padding: 20px;
@@ -114,19 +115,12 @@ import SkillLogo from "./SkillLogo.astro";
     grid-row: 1;
   }
 
-  /* .container--skills__title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-  } */
-
   .container--version__control {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: var(--main-color);
+    background-color: var(--background);
     border-radius: 10px;
     width: 20vw;
     padding: 20px;
@@ -135,7 +129,7 @@ import SkillLogo from "./SkillLogo.astro";
   }
 
   .skills--subtitle {
-    color: var(--background);
+    color: var(--main-color);
   }
 
   .skills--container {
@@ -147,16 +141,10 @@ import SkillLogo from "./SkillLogo.astro";
     grid-gap: 20px;
   }
 
-  /* .skills--title{
-    font-size: 2em;
-    border-style: none outset outset none;
-    border-color: var(--secondary-color);
-    padding: 5px;
-  } */
-
   .skills--list {
     display: flex;
     margin-top: 7vh;
     margin-bottom: 7vh;
   }
+
 </style>
