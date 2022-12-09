@@ -34,4 +34,10 @@ const {logo, name} = Astro.props as Props
     filter: brightness(120%);
     margin: 20px 30px 20px 30px;
   }
+
+  @media (max-width: 1250px){
+    .container--logo{
+      flex-direction: column;
+    }
+  }
 </style>
