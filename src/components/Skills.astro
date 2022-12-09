@@ -3,127 +3,93 @@ import SkillLogo from "./SkillLogo.astro";
 ---
 
 <section class="section--skills" id="skills">
-  <div class="container--section__title" >
+  <div class="container--section__title">
     <h2 class="section--title">{"< Skills />"}</h2>
   </div>
 
   <div class="skills--container">
-    <div class="container--version__control">
+    <div class="container--version__control grid--skill">
       <h2 class="skills--subtitle">Version Control</h2>
-      <SkillLogo logo="/images/github.png" name="Github" />
-      <SkillLogo logo="/images/Git.png" name="Git" />
+      <div class="skill--list">
+        <SkillLogo logo="/images/github.png" name="Github" />
+        <SkillLogo logo="/images/Git.png" name="Git" />
+      </div>
     </div>
 
-    <div class="container--database">
+    <div class="container--database grid--skill">
       <h2 class="skills--subtitle">Database</h2>
-      <SkillLogo logo="/images/postgreSQL.png" name="PostgreSQL" />
-      <SkillLogo logo="/images/mongodb.png" name="MongoDB" />
+      <div class="skill--list">
+        <SkillLogo logo="/images/postgreSQL.png" name="PostgreSQL" />
+        <SkillLogo logo="/images/mongodb.png" name="MongoDB" />
+      </div>
     </div>
 
-    <div class="container--languages">
+    <div class="container--languages grid--skill">
       <h2 class="skills--subtitle">Languages</h2>
-      <SkillLogo logo="/images/javascript.png" name="JavaScript" />
-      <SkillLogo logo="/images/html.png" name="HTML" />
-      <SkillLogo logo="/images/css.png" name="CSS" />
-      <SkillLogo logo="/images/astro.png" name="Astro" />
-      <SkillLogo logo="/images/React.png" name="ReactJs" />
-      <SkillLogo logo="/images/Redux.png" name="Redux" />
-      <SkillLogo logo="/images/NodeJs.png" name="NodeJS" />
-      <SkillLogo logo="/images/express.png" name="Express" />
+      <div class="skill--list">
+        <SkillLogo logo="/images/javascript.png" name="JavaScript" />
+        <SkillLogo logo="/images/html.png" name="HTML" />
+        <SkillLogo logo="/images/css.png" name="CSS" />
+        <SkillLogo logo="/images/astro.png" name="Astro" />
+        <SkillLogo logo="/images/React.png" name="ReactJs" />
+        <SkillLogo logo="/images/Redux.png" name="Redux" />
+        <SkillLogo logo="/images/NodeJs.png" name="NodeJS" />
+        <SkillLogo logo="/images/express.png" name="Express" />
+      </div>
     </div>
 
-    <div class="container--frameworks">
+    <div class="container--frameworks grid--skill">
       <h2 class="skills--subtitle">Frameworks</h2>
-      <SkillLogo logo="/images/materialui.png" name="Material UI" />
+      <div class="skill--list">
+        <SkillLogo logo="/images/materialui.png" name="Material UI" />
+      </div>
     </div>
 
-    <div class="container--hosting">
+    <div class="container--hosting grid--skill">
       <h2 class="skills--subtitle">Hosting Services</h2>
-      <SkillLogo logo="/images/heroku-icon.png" name="Heroku" />
-      <SkillLogo logo="/images/vercel.png" name="Vercel" />
+      <div class="skill--list">
+        <SkillLogo logo="/images/heroku-icon.png" name="Heroku" />
+        <SkillLogo logo="/images/vercel.png" name="Vercel" />
+      </div>
     </div>
 
-    <div class="container--tools">
+    <div class="container--tools grid--skill">
       <h2 class="skills--subtitle">Tools</h2>
-      <SkillLogo logo="/images/trello.png" name="Trello" />
-      <SkillLogo logo="/images/scrum.png" name="Scrum" />
+      <div class="skill--list">
+        <SkillLogo logo="/images/trello.png" name="Trello" />
+        <SkillLogo logo="/images/scrum.png" name="Scrum" />
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-
-.container--tools {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--background);
-    border-radius: 10px;
-    width: 20vw;
-    padding: 20px;
+  .container--tools {
     grid-column: 1;
     grid-row: 3;
   }
-  
 
   .container--hosting {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--background);
-    border-radius: 10px;
-    width: 20vw;
-    padding: 20px;
     grid-column: 2;
     grid-row: 2;
   }
 
   .container--frameworks {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--background);
-    border-radius: 10px;
-    width: 20vw;
-    padding: 20px;
     grid-column: 1;
     grid-row: 2;
   }
 
   .container--languages {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--background);
-    border-radius: 10px;
-    width: 20vw;
-    padding: 20px;
     grid-column: 3;
-    grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row: 1 / 4;
   }
 
   .container--database {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--background);
-    border-radius: 10px;
-    width: 20vw;
-    padding: 20px;
     grid-column: 2;
     grid-row: 1;
   }
 
   .container--version__control {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--background);
-    border-radius: 10px;
-    width: 20vw;
-    padding: 20px;
     grid-column: 1;
     grid-row: 1;
   }
@@ -136,8 +102,8 @@ import SkillLogo from "./SkillLogo.astro";
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: 20vw 20vw 20vw;
-    grid-template-rows: 30vh 30vh 30vh;
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 30vh);
     grid-gap: 20px;
   }
 
@@ -147,4 +113,21 @@ import SkillLogo from "./SkillLogo.astro";
     margin-bottom: 7vh;
   }
 
+  @media (max-width: 1250px) {
+    .skills--container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .skill--list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 25vh;
+      flex-wrap: wrap;
+    }
+  }
 </style>
