@@ -1,38 +1,38 @@
 ---
+import githubLogo from "/images/github-logo.png";
+import deployLogo from "/images/deploy.png";
+import Github from "./svg/Github.astro";
+import Deploy from "./svg/Deploy.astro";
 
-import githubLogo from "/images/github-logo.png"
-import deployLogo from "/images/deploy.png"
-import Github from "./svg/Github.astro"
-import Deploy from "./svg/Deploy.astro"
-
-export interface Props{
-  image: string,
-  title: string,
-  description: string,
-  techs: Array<string>,
-  deploy: string,
-  github: string
+export interface Props {
+  image: string;
+  title: string;
+  description: string;
+  techs: Array<string>;
+  deploy: string;
+  github: string;
 }
 
-const { image, title, description, techs, github, deploy } = Astro.props as Props
+const { image, title, description, techs, github, deploy } =
+  Astro.props as Props;
 ---
 
-
 <div class="card--container">
-
   <div class="image--container">
     <img class="image" src={image} />
   </div>
 
-  <div class="info--container"> 
+  <div class="info--container">
     <h2 class="title">{title}</h2>
     <div class="container--description">
       <p class="description">{description}</p>
     </div>
     <div class="container--techs">
-      {techs.map((el: string) => {
-        return <span class="span--tech">{el}</span>
-      })}
+      {
+        techs.map((el: string) => {
+          return <span class="span--tech">{el}</span>;
+        })
+      }
     </div>
     <div class="container--links">
       <a class="link" href={github} target="_blank">
@@ -42,14 +42,13 @@ const { image, title, description, techs, github, deploy } = Astro.props as Prop
       <a class="link" href={deploy} target="_blank">
         <!-- <img class="deploy--logo" src={deployLogo}> -->
         <Deploy />
-      </a> 
+      </a>
     </div>
   </div>
 </div>
 
-
 <style>
-  .card--container{
+  .card--container {
     display: flex;
     justify-content: center;
     background-color: var(--background);
@@ -59,50 +58,48 @@ const { image, title, description, techs, github, deploy } = Astro.props as Prop
     margin: 20px;
   }
 
-
-  .image{
+  .image {
     height: 100%;
     width: 20em;
-    
   }
 
-  .container--links{
+  .container--links {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 15px;
     width: 100%;
   }
-  
-  .link{
+
+  .link {
     margin: 0 15px;
-    fill: var(--secondary-color)
+    fill: var(--secondary-color);
   }
-  .info--container{
+  .info--container {
     display: flex;
     flex-direction: column;
   }
- 
-  .title{
+
+  .title {
     font-size: 2.5em;
     color: var(--secondary-color);
     text-align: center;
     margin: 5px;
   }
 
-  .description{
+  .description {
     color: var(--main-color);
     padding: 5px;
     font-size: 1.3em;
   }
 
-  .container--techs{
-    display: flex; 
+  .container--techs {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .span--tech{
+  .span--tech {
     color: var(--main-color);
     box-shadow: 1px 1px 2px var(--secondary-color);
     padding: 5px;
@@ -110,14 +107,26 @@ const { image, title, description, techs, github, deploy } = Astro.props as Prop
     margin: 5px;
     cursor: default;
   }
-  .github--logo{  
+  .github--logo {
     height: 40px;
   }
 
-  .deploy--logo{
+  .deploy--logo {
     height: 40px;
-    /* filter: invert(); */
-    fill: var(--secondary-color)
+    fill: var(--secondary-color);
+  } 
 
+  @media  (max-width: 1490px){
+    .card--container{
+      flex-direction: column;
+    }
+
+    .card--container{
+      min-width: 80vw;
+    }
+
+    .image{
+      width: 100%;
+    }
   }
 </style>
