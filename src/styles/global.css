@@ -6,10 +6,10 @@
 
 *, *::before, *::after{
   box-sizing: border-box;
-  /* background-color: #1d1d1dea; */
   color: var(--main-color);
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 .section--title{
@@ -42,4 +42,5 @@
     width: 80vw;
   }
 }
+
 
