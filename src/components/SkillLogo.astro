@@ -31,12 +31,18 @@ const {logo, name} = Astro.props as Props
     height: 60px;
     width: 60px;
     filter: brightness(120%);
-    margin: 20px 30px 20px 30px;
+    margin: 20px 30px;
   }
 
   @media (max-width: 1250px){
     .container--logo{
       flex-direction: column;
+    }
+  }
+
+  @media (max-height: 800px){
+    .logo{
+      margin: 10px 30px;
     }
   }
 </style>
