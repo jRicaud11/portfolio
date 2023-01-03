@@ -1,7 +1,7 @@
 ---
-  import Github from "./svg/Github.astro"
-  import Linkedin from "./svg/Linkedin.astro"
-  import Download from "./Download.astro";
+import Github from "./svg/Github.astro";
+import Linkedin from "./svg/Linkedin.astro";
+import Download from "./Download.astro";
 ---
 
 <section class="container--welcome">
@@ -10,101 +10,56 @@
       <h1 class="welcome--title">Welcome! I'm Juan</h1>
     </div>
     <div class="welcome--content">
-      <h3 class="welcome--text"><strong>Fullstack developer</strong> based in Argentina.</h3>
+      <h3 class="welcome--text">
+        <strong>Fullstack developer</strong> based in Argentina.
+      </h3>
       <div class="welcome--links">
         <a href="#" class="link" target="_blank" aria-label="Github">
-          <Github /> 
+          <Github />
         </a>
-  
+
         <a href="#" class="link" target="_blank" aria-label="Linkedin">
           <Linkedin />
         </a>
       </div>
-  
+
       <Download />
-
     </div>
-
   </div>
   <div class="container--image__welcome">
-    <img class="welcome--image" src="/images/coding.png"/>
+    <img class="welcome--image" src="/images/coding.png" />
   </div>
-
 </section>
 
 <style>
-
-  .welcome--image{
+  .welcome--image {
     height: 35vh;
     animation: fadeIn 4s ease-in-out;
   }
-  .welcome--content{
+  .welcome--content {
     animation: fadeIn 4s ease-in-out;
   }
 
-  @keyframes fadeIn{
-    0%{
+  @keyframes fadeIn {
+    0% {
       opacity: 0;
     }
-    50%{
+    50% {
       opacity: 0;
     }
-    100%{
+    100% {
       opacity: 1;
     }
-
   }
-  .title{
+  .title {
     overflow: hidden;
   }
 
-  @keyframes moves720p{
-    0%{
-      position: absolute;
-      right: 20%; 
-      top: 33%;
-    }
-    50%{
-      position: absolute;
-      right: 20%; 
-      top: 33%;
-    }
-    90%{
-      position: absolute;
-      right: 46%;
-      top: 33%;
-    }
-    100%{
-      right: 46%;
-    }
-  }
-
-  @keyframes moves1080p{
-    0%{
-      position: absolute;
-      right: 20%; 
-      top: 36%;
-    }
-    50%{
-      position: absolute;
-      right: 20%; 
-      top: 36%;
-    }
-    90%{
-      position: absolute;
-      right: 50%;
-      top: 36%;
-    }
-    100%{
-      right: 50%;
-
-    }
-  }
-  .container--image__welcome{
+  .container--image__welcome {
     margin: 30px;
   }
 
-  .welcome--download{
+  .welcome--download {
     text-decoration: none;
     background-color: var(--secondary-color);
     fill: rgb(209, 205, 205);
@@ -115,78 +70,117 @@
     font-size: 1em;
   }
 
-
-  .welcome--title{
+  .welcome--title {
     font-size: 60px;
     letter-spacing: 2px;
     position: relative;
   }
 
-  @keyframes appear{
-    from{
-      bottom: -60px;
-    }
-    to{
-      bottom: 0px;
-    }
-  }
-
-  .welcome--text{
+  .welcome--text {
     padding: 10px;
     letter-spacing: 2px;
     font-size: 1.5em;
   }
 
-  .container--welcome{
+  .container--welcome {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
   }
 
-  .welcome--links{
+  .welcome--links {
     display: flex;
     justify-content: center;
     padding: 10px;
   }
 
-  .link{
+  .link {
     margin: 10px;
     text-decoration: none;
     fill: var(--secondary-color);
   }
 
-  .link:hover{  
+  .link:hover {
     fill: rgb(209, 205, 205);
-    transition: .5s;
+    transition: 0.5s;
   }
 
-  @media (min-width: 1091px){
-    .welcome--title{
+  @keyframes moves720p {
+    0% {
+      position: absolute;
+      right: 20%;
+      top: 33%;
+    }
+    50% {
+      position: absolute;
+      right: 20%;
+      top: 33%;
+    }
+    90% {
+      position: absolute;
+      right: 46%;
+      top: 33%;
+    }
+    100% {
+      right: 46%;
+    }
+  }
+
+  @keyframes moves1080p {
+    0% {
+      position: absolute;
+      right: 20%;
+      top: 36%;
+    }
+    50% {
+      position: absolute;
+      right: 20%;
+      top: 36%;
+    }
+    90% {
+      position: absolute;
+      right: 50%;
+      top: 36%;
+    }
+    100% {
+      right: 50%;
+    }
+  }
+
+  @keyframes appear {
+    from {
+      bottom: -60px;
+    }
+    to {
+      bottom: 0px;
+    }
+  }
+
+  @media (min-width: 1091px) {
+    .welcome--title {
       animation: appear 1s ease-in-out;
     }
-    .title{
+    .title {
       animation: moves1080p 2s ease-in-out;
     }
-
   }
 
-  @media (max-width: 1090px){
-    .container--image__welcome{
+  @media (max-width: 1090px) {
+    .container--image__welcome {
       display: none;
     }
-    .welcome--content{
+    .welcome--content {
       animation: fadeIn 2s ease-in-out;
     }
-    .welcome--image{
+    .welcome--image {
       animation: fadeIn 2s ease-in-out;
     }
   }
 
-  @media (max-height: 766px){
-    .title{
+  @media (max-height: 766px) {
+    .title {
       animation: moves720p 2s ease-in-out;
     }
   }
-
 </style>

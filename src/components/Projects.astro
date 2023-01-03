@@ -1,6 +1,8 @@
 ---
  import { projects } from "./data/projects";
  import ProjectCard from "./ProjectCard.astro";
+ import ProjectGallery from "./ProjectGallery.astro";
+ import AstroProjects from "./ProjectGallery.astro";
 ---
 
 <section class="projects--container" id="projects">
@@ -9,9 +11,10 @@
   </div>
 
   <div class="container--cards__projects">
-    {
+     {
       projects.map((el) => {
-        return <ProjectCard 
+        return <AstroProjects 
+          gallery={el.gallery}
           image={el.image}
           title={el.title} 
           description={el.description}
@@ -26,11 +29,15 @@
 
 
 <style>
+  .projects--container{
+    position: relative;
+  }
   .container--cards__projects{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin: 10px;
+    gap: 5vw;
+    flex-wrap: wrap;
+    
   }
 </style>

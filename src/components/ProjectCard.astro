@@ -11,9 +11,10 @@ export interface Props {
   techs: Array<string>;
   deploy: string;
   github: string;
+  gallery: Array<string>;
 }
 
-const { image, title, description, techs, github, deploy } =
+const { image, title, description, techs, github, deploy, gallery } =
   Astro.props as Props;
 ---
 
