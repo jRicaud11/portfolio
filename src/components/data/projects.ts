@@ -3,6 +3,18 @@ import k9create from "/images/K9/k9-create.jpg"
 import k9detail from "/images/K9/k9-detail.jpg"
 import k9filter from "/images/K9/k9-filter.jpg"
 import mainPicScusi from "/images/scusi/main.jpg"
+import allBooks from "/images/scusi/allBooks.jpg"
+import dashboard from "/images/scusi/dashboard.jpg"
+import digitalBooks from "/images/scusi/digitalBooks.jpg"
+import favorites from "/images/scusi/favorites.jpg"
+import history from "/images/scusi/history.jpg"
+import login from "/images/scusi/login.jpg"
+import newBook from "/images/scusi/newBook.jpg"
+import cart from "/images/scusi/shoppingcart.jpg"
+import signup from "/images/scusi/signup.jpg"
+import stock from "/images/scusi/stock.jpg"
+import userProfile from "/images/scusi/userProfile.jpg"
+
 
 export const projects = [
   {
@@ -17,7 +29,7 @@ export const projects = [
   {
     image: mainPicScusi,
     title: "Mi Scusi Books",
-    gallery: [],
+    gallery: [mainPicScusi, allBooks, dashboard, digitalBooks, favorites, history, login, newBook, cart, signup, stock, userProfile],
     description: "This was the final group project for soyHenry's bootcamp. It consisted of 4 weeks of work under the SCRUM methodology, developing a book e-commerce. My rol was as a fullstack developer but focused mainly on routes development and database modeling.",
     techs: ["React", "Redux Toolkit", "MaterialUI", "Node.js", "Express", "MongoDB", "Mongo Atlas", "Mongoose", "PayPal", "Google OAuth2", "Ant Desing", "CSS", "Node Mailer", "JWT"],
     deploy: "https://mi-scusi-books.vercel.app/",
