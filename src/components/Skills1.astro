@@ -1,0 +1,139 @@
+---
+import SkillLogo from "./SkillLogo.astro";
+---
+
+<section class="section--skills" id="skills">
+  <div class="container--section__title">
+    <h2 class="section--title">{"< Skills />"}</h2>
+  </div>
+
+  <div class="skills--container">
+    <div class="container--version__control grid--skill">
+      <h2 class="skills--subtitle">Version Control</h2>
+      <div class="skill--list">
+        <SkillLogo logo="/images/github.png" name="Github" />
+        <SkillLogo logo="/images/Git.png" name="Git" />
+      </div>
+    </div>
+
+    <div class="container--database grid--skill">
+      <h2 class="skills--subtitle">Database</h2>
+      <div class="skill--list">
+        <SkillLogo logo="/images/postgreSQL.png" name="PostgreSQL" />
+        <SkillLogo logo="/images/mongodb.png" name="MongoDB" />
+      </div>
+    </div>
+
+    <div class="container--languages grid--skill">
+      <h2 class="skills--subtitle">Languages</h2>
+      <div class="skill--list">
+        <SkillLogo logo="/images/javascript.png" name="JavaScript" />
+        <SkillLogo logo="/images/html.png" name="HTML" />
+        <SkillLogo logo="/images/css.png" name="CSS" />
+        <SkillLogo logo="/images/astro.png" name="Astro" />
+        <SkillLogo logo="/images/React.png" name="ReactJs" />
+        <SkillLogo logo="/images/Redux.png" name="Redux" />
+        <SkillLogo logo="/images/NodeJs.png" name="NodeJS" />
+        <SkillLogo logo="/images/express.png" name="Express" />
+      </div>
+    </div>
+
+    <div class="container--frameworks grid--skill">
+      <h2 class="skills--subtitle">Frameworks</h2>
+      <div class="skill--list">
+        <SkillLogo logo="/images/materialui.png" name="Material UI" />
+      </div>
+    </div>
+
+    <div class="container--hosting grid--skill">
+      <h2 class="skills--subtitle">Hosting Services</h2>
+      <div class="skill--list">
+        <SkillLogo logo="/images/heroku-icon.png" name="Heroku" />
+        <SkillLogo logo="/images/vercel.png" name="Vercel" />
+      </div>
+    </div>
+
+    <div class="container--tools grid--skill">
+      <h2 class="skills--subtitle">Tools</h2>
+      <div class="skill--list">
+        <SkillLogo logo="/images/trello.png" name="Trello" />
+        <SkillLogo logo="/images/scrum.png" name="Scrum" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .container--tools {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .container--hosting {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .container--frameworks {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .container--languages {
+    grid-column: 3;
+    grid-row: 1 / 4;
+  }
+
+  .container--database {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .container--version__control {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .skills--subtitle {
+    color: var(--main-color);
+  }
+
+  .skills--container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 30vh);
+    grid-gap: 20px;
+  }
+
+  .skills--list {
+    display: flex;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+  }
+
+  @media (max-width: 1250px) {
+    .skills--container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .skill--list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 25vh;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-height: 800px){
+    .skills--subtitle{
+      margin-bottom: 10px;
+    }
+  }
+</style>
