@@ -1,7 +1,7 @@
 import astro from "/images/astro.png"
 import css from "/images/css.png"
 import express from "/images/express.png"
-import Git from "/images/Git.png"
+import gitLogo from "/images/Git.png"
 import github from "/images/github.png"
 import heroku from "/images/heroku.png"
 import html from "/images/html.png"
@@ -34,7 +34,7 @@ export const techs = {
     {name: "Redux", img: redux}
   ],
   tools: [
-    {name: "Git", img: Git},
+    {name: "Git", img: gitLogo},
     {name: "Github", img: github},
     {name: "Heroku", img: heroku},
     {name: "Vercel", img: vercel},
