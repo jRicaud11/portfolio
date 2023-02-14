@@ -1,17 +1,17 @@
 import astro from "/images/astro.png"
 import css from "/images/css.png"
 import express from "/images/express.png"
-// import gitLogo from "/images/Git.png"
+import gitLogo from "/images/Git.png"
 import github from "/images/github.png"
 import heroku from "/images/heroku.png"
 import html from "/images/html.png"
 import javascript from "/images/javascript.png"
 import material from "/images/materialui.png"
 import mongo from "/images/mongodb.png"
-import node from "/images/nodejs.png"
+import node from "/images/Nodejs.png"
 import postgre from "/images/postgreSQL.png"
-import react from "/images/react.png"
-import redux from "/images/redux.png"
+import react from "/images/React.png"
+import redux from "/images/Redux.png"
 import scrum from "/images/scrum.png"
 import trello from "/images/trello.png"
 import vercel from "/images/vercel.png"
@@ -34,7 +34,7 @@ export const techs = {
     {name: "Redux", img: redux}
   ],
   tools: [
-    // {name: "Git", img: gitLogo},
+    {name: "Git", img: gitLogo},
     {name: "Github", img: github},
     {name: "Heroku", img: heroku},
     {name: "Vercel", img: vercel},
