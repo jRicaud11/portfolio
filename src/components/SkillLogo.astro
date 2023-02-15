@@ -8,8 +8,8 @@ const {logo, name} = Astro.props as Props
 ---
 
 <div class="container--logo">
-  <img class="logo" src={logo} />
-  <p class="name">{name}</p>
+  <img class="logo" src={logo} title={name}/>
+  <!-- <p class="name">{name}</p> -->
 </div>
 
 <style>
@@ -33,7 +33,7 @@ const {logo, name} = Astro.props as Props
     height: 60px;
     width: 60px;
     /* filter: brightness(120%); */
-    margin: 20px 30px;
+    margin: 20px 30px 40px 30px;
   }
 
   @media (max-width: 1250px){
