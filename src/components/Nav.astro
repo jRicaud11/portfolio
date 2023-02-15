@@ -1,13 +1,18 @@
 <header>
   <nav class="navbar">
     <div class="static--link">
-      <a href="/#">{"</>"}</a>
+      <!-- <a href="/#">{"</>"}</a> -->
+      <li class="link"><a href="/#" class="link--bracket"><span class="bracket">{"< "}</span> / <span class="bracket">{">"}</span></a></li>
+
     </div>
     <ul class="list--links">
-      <li class="link"><a href="/#about">{"< About />"}</a></li>
-      <li class="link"><a href="/#skills">{"< Skills />"}</a></li>
-      <li class="link"><a href="/#projects">{"<Projects />"}</a></li>
-      <li class="link"><a href="/#contact">{"<Contact />"}</a></li>
+      <li class="link"><a href="/#about" class="link--bracket"><span class="bracket">{"< "}</span>About <span class="bracket">{"/>"}</span></a></li>
+      <li class="link"><a href="/#skills" class="link--bracket"><span class="bracket">{"< "}</span>Skills <span class="bracket">{"/>"}</span></a></li>
+      <li class="link"><a href="/#projects" class="link--bracket"><span class="bracket">{"< "}</span>Projects <span class="bracket">{"/>"}</span></a></li>
+      <li class="link"><a href="/#contact" class="link--bracket"><span class="bracket">{"< "}</span>Contact <span class="bracket">{"/>"}</span></a></li>
+      <!-- <li class="link"><a href="/#skills">{"< Skills />"}</a></li> -->
+      <!-- <li class="link"><a href="/#projects">{"<Projects />"}</a></li>
+      <li class="link"><a href="/#contact">{"<Contact />"}</a></li> -->
     </ul>
    
     <div class="menu">
@@ -34,7 +39,7 @@
 
   .navbar{
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: space-between;
     max-height: 100%;
     margin: 0 5% 0 5%;
@@ -54,8 +59,29 @@
     text-decoration: none;
   }
 
+  .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .link a{
     text-decoration: none;
+    font-size: 1.2em;
+    transition: color .3s ease-in-out;
+  }
+
+  .link--bracket:hover{
+    color: var(--secondary-color);
+  }
+
+  .link--bracket:hover .bracket{
+    color: #fff;
+  }
+
+  .bracket {
+    color: var(--secondary-color);
+    transition: color .3s ease-in-out;
   }
 
   .menu{
