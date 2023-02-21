@@ -1,61 +1,58 @@
 ---
 import SkillLogo from "./SkillLogo.astro";
-import { techs } from "./data/techs.js"
+import { techs } from "./data/techs.js";
 ---
 
 <section class="section--skills" id="skills">
   <div class="container--section__title">
     <h2 class="section--title">{"< Skills />"}</h2>
   </div>
-  
+
   <div class="skills">
     <div class="skills--container">
       <h2>Frontend</h2>
-        <div class="logos">
-          {
-            techs.front.map(el => {
-              return <SkillLogo name={el.name} logo={el.img}/>  
-            })
-          }
-
-        </div>
+      <div class="logos">
+        {
+          techs.front.map((el) => {
+            return <SkillLogo name={el.name} logo={el.img} />;
+          })
+        }
+      </div>
     </div>
 
     <div class="skills--container">
       <h2>Backend</h2>
-        <div class="logos">
-          {
-            techs.back.map(el => {
-              return <SkillLogo name={el.name} logo={el.img}/>  
-            })
-          }
-
-        </div>
+      <div class="logos">
+        {
+          techs.back.map((el) => {
+            return <SkillLogo name={el.name} logo={el.img} />;
+          })
+        }
+      </div>
     </div>
-    
+
     <div class="skills--container">
       <h2>Tools</h2>
-        <div class="logos">
-          {
-            techs.tools.map(el => {
-              return <SkillLogo name={el.name} logo={el.img}/>  
-            })
-          }
-
-        </div>
+      <div class="logos">
+        {
+          techs.tools.map((el) => {
+            return <SkillLogo name={el.name} logo={el.img} />;
+          })
+        }
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-  .skills{
+  .skills {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
 
-  .skills--container{
+  .skills--container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,8 +67,8 @@ import { techs } from "./data/techs.js"
     font-size: 32px;
     margin-top: 20px;
     border-bottom: 1px solid var(--main-color);
-  }  
-  .logos{
+  }
+  .logos {
     display: flex;
     justify-content: center;
     align-items: center;

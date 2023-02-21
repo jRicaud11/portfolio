@@ -1,0 +1,139 @@
+---
+// import { log } from "astro/dist/core/logger/core";
+import { projects } from "../../components/data/projects";
+import { techs as technologies } from "../../components/data/techs";
+import SkillLogo from "../../components/SkillLogo.astro";
+import Github from "../../components/svg/Github.astro";
+import Deploy from "../../components/svg/Deploy.astro";
+import "../../styles/global.css";
+
+export function getStaticPaths() {
+  return projects.map(
+    ({ image, title, path, gallery, description, techs, deploy, github }) => {
+      return {
+        params: { path },
+        props: { image, title, gallery, description, techs, deploy, github },
+      };
+    }
+  );
+}
+
+const { path } = Astro.params;
+const { image, title, gallery, description, techs, deploy, github } =
+  Astro.props;
+
+let techUsed = [
+  ...technologies.back,
+  ...technologies.front,
+  ...technologies.tools,
+];
+techUsed = techs.map((t: string) => {
+  return techUsed.find((el) => el.name === t);
+});
+---
+
+<html>
+  <head>
+    <title>JMR | {title}</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/FavIcon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/FavIcon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/FavIcon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/FavIcon/site.webmanifest" />
+  </head>
+  <body>
+    <div class="project--container">
+      <h2>{title}</h2>
+      <p>{description}</p>
+      <div class="link--container">
+        <a href={github} target="_blank">
+          <Github />
+        </a>
+        <a href={deploy} target="_blank">
+          <Deploy />
+        </a>
+      </div>
+    </div>
+    <div class="project--container">
+      <h2>Techs</h2>
+      <div class="techs">
+        {techUsed.map((t) => <SkillLogo name={t.name} logo={t.img} />)}
+      </div>
+    </div>
+    <div class="project--container">
+      <h2>Images</h2>
+      {gallery.map((img: string) => <img src={img} />)}
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--background);
+  }
+
+  .btn {
+    color: black;
+    background-color: transparent;
+    border: none;
+  }
+
+  .project--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    width: 80vw;
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .project--container p {
+    color: black;
+    font-size: 1.2rem;
+  }
+
+  .project--container h2 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  .project--container img {
+    margin: 10px 0;
+    width: 95%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px black;
+  }
+
+  .link--container {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  .techs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+</style>

@@ -1,49 +1,47 @@
 ---
-export interface Props{
-  logo: string,
-  name: string
+export interface Props {
+  logo: string;
+  name: string;
 }
 
-const {logo, name} = Astro.props as Props
+const { logo, name } = Astro.props as Props;
 ---
 
 <div class="container--logo">
-  <img class="logo" src={logo} title={name}/>
-  <!-- <p class="name">{name}</p> -->
+  <img class="logo" src={logo} title={name} />
 </div>
 
 <style>
-  .container--logo{
+  .container--logo {
     display: flex;
     align-items: center;
     text-align: center;
     flex-direction: column;
     margin: 10px 20px;
   }
-  
-  .name{
+
+  .name {
     padding: 10px;
     font-size: 20px;
     letter-spacing: 2px;
     color: var(--main-color);
   }
 
-  .logo{
+  .logo {
     background: transparent;
     height: 60px;
     width: 60px;
-    /* filter: brightness(120%); */
     margin: 20px 30px 40px 30px;
   }
 
-  @media (max-width: 1250px){
-    .container--logo{
+  @media (max-width: 1250px) {
+    .container--logo {
       flex-direction: column;
     }
   }
 
-  @media (max-height: 800px){
-    .logo{
+  @media (max-height: 800px) {
+    .logo {
       margin: 10px 30px;
     }
   }

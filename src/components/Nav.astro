@@ -1,34 +1,55 @@
 <header>
   <nav class="navbar">
     <div class="static--link">
-      <!-- <a href="/#">{"</>"}</a> -->
-      <li class="link"><a href="/#" class="link--bracket"><span class="bracket">{"< "}</span> / <span class="bracket">{">"}</span></a></li>
-
+      <li class="link">
+        <a href="/#" class="link--bracket"
+          ><span class="bracket">{"< "}</span> / <span class="bracket"
+            >{">"}</span
+          >
+        </a>
+      </li>
     </div>
     <ul class="list--links">
-      <li class="link"><a href="/#about" class="link--bracket"><span class="bracket">{"< "}</span>About <span class="bracket">{"/>"}</span></a></li>
-      <li class="link"><a href="/#skills" class="link--bracket"><span class="bracket">{"< "}</span>Skills <span class="bracket">{"/>"}</span></a></li>
-      <li class="link"><a href="/#projects" class="link--bracket"><span class="bracket">{"< "}</span>Projects <span class="bracket">{"/>"}</span></a></li>
-      <li class="link"><a href="/#contact" class="link--bracket"><span class="bracket">{"< "}</span>Contact <span class="bracket">{"/>"}</span></a></li>
-      <!-- <li class="link"><a href="/#skills">{"< Skills />"}</a></li> -->
-      <!-- <li class="link"><a href="/#projects">{"<Projects />"}</a></li>
-      <li class="link"><a href="/#contact">{"<Contact />"}</a></li> -->
+      <li class="link">
+        <a href="/#about" class="link--bracket"
+          ><span class="bracket">{"< "}</span>About <span class="bracket"
+            >{"/>"}</span
+          >
+        </a>
+      </li>
+      <li class="link">
+        <a href="/#skills" class="link--bracket"
+          ><span class="bracket">{"< "}</span>Skills <span class="bracket"
+            >{"/>"}</span
+          >
+        </a>
+      </li>
+      <li class="link">
+        <a href="/#projects" class="link--bracket"
+          ><span class="bracket">{"< "}</span>Projects <span class="bracket"
+            >{"/>"}</span
+          >
+        </a>
+      </li>
+      <li class="link">
+        <a href="/#contact" class="link--bracket"
+          ><span class="bracket">{"< "}</span>Contact <span class="bracket"
+            >{"/>"}</span
+          >
+        </a>
+      </li>
     </ul>
-   
+
     <div class="menu">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </div>
-
   </nav>
 </header>
 
-
-
 <style>
-
-  header{
+  header {
     position: fixed;
     background-color: var(--background);
     width: 100%;
@@ -37,7 +58,7 @@
     z-index: 1;
   }
 
-  .navbar{
+  .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -47,7 +68,7 @@
     font-size: 20px;
   }
 
-  .list--links{
+  .list--links {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,7 +76,7 @@
     list-style: none;
   }
 
-  .static--link > a{
+  .static--link > a {
     text-decoration: none;
   }
 
@@ -65,31 +86,31 @@
     align-items: center;
   }
 
-  .link a{
+  .link a {
     text-decoration: none;
     font-size: 1.2em;
-    transition: color .3s ease-in-out;
+    transition: color 0.3s ease-in-out;
   }
 
-  .link--bracket:hover{
+  .link--bracket:hover {
     color: var(--secondary-color);
   }
 
-  .link--bracket:hover .bracket{
+  .link--bracket:hover .bracket {
     color: #fff;
   }
 
   .bracket {
     color: var(--secondary-color);
-    transition: color .3s ease-in-out;
+    transition: color 0.3s ease-in-out;
   }
 
-  .menu{
+  .menu {
     display: none;
     cursor: pointer;
   }
 
-  .bar{
+  .bar {
     display: block;
     width: 25px;
     height: 3px;
@@ -99,24 +120,24 @@
     transition: all 0.3s ease-in-out;
   }
 
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     .menu {
       display: block;
     }
 
-    .menu.active .bar:nth-child(2){
+    .menu.active .bar:nth-child(2) {
       opacity: 0;
     }
-  
-    .menu.active .bar:nth-child(1){
+
+    .menu.active .bar:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
     }
-  
-    .menu.active .bar:nth-child(3){
+
+    .menu.active .bar:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
     }
 
-    .list--links{
+    .list--links {
       position: fixed;
       left: -100%;
       top: 56px;
@@ -128,11 +149,11 @@
       margin-top: 0;
     }
 
-    .list--links.active{
+    .list--links.active {
       left: 0;
     }
 
-    .link{
+    .link {
       margin: 16px 0;
     }
   }
@@ -141,17 +162,17 @@
 <script>
   const hamburguer = document.querySelector(".menu");
   const list = document.querySelector(".list--links");
-  const links = document.querySelectorAll("a")
+  const links = document.querySelectorAll("a");
 
-  hamburguer?.addEventListener("click", () =>{
-    hamburguer.classList.toggle("active")
-    list?.classList.toggle("active")
-  })
+  hamburguer?.addEventListener("click", () => {
+    hamburguer.classList.toggle("active");
+    list?.classList.toggle("active");
+  });
 
-  links.forEach(l => 
+  links.forEach((l) =>
     l.addEventListener("click", () => {
       hamburguer?.classList.remove("active");
       list?.classList.remove("active");
     })
-  )
+  );
 </script>

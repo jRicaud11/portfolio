@@ -1,16 +1,20 @@
 ---
- import download from "/images/Download-01.png"
+import download from "/images/Download-01.png";
 ---
 
-<a class="download--link" href="/download/Juan-Manuel-Ricaud-CV.pdf" download="Juan-Manuel-Ricaud-CV.pdf">
+<a
+  class="download--link"
+  href="/download/Juan-Manuel-Ricaud-CV.pdf"
+  download="Juan-Manuel-Ricaud-CV.pdf"
+>
   <div class="download--btn">
-    <img class="image--download" src={download}/>
-    <p>CV / Resumee </p>
+    <img class="image--download" src={download} />
+    <p>CV / Resumee</p>
   </div>
 </a>
 
 <style>
-  .download--btn{
+  .download--btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,14 +23,14 @@
     padding: 15px 10px;
     border-radius: 10px;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
   }
 
-  .download--btn:hover{
+  .download--btn:hover {
     background-color: var(--main-color);
   }
 
-  .download--btn p{
+  .download--btn p {
     font-size: 1.5em;
     background-color: transparent;
     margin-left: 15px;
@@ -34,16 +38,14 @@
     font-weight: 600;
   }
 
-  .download--link{
+  .download--link {
     display: flex;
     justify-content: center;
     text-decoration: none;
     background-color: transparent;
   }
-  .image--download{
+  .image--download {
     height: 30px;
     background-color: transparent;
   }
-
-
 </style>

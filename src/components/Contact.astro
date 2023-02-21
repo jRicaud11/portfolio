@@ -1,7 +1,7 @@
 ---
-  import Linkedin from "./svg/Linkedin.astro";
-  import Github from "./svg/Github.astro";
-  import Email from "./svg/Email.astro";
+import Linkedin from "./svg/Linkedin.astro";
+import Github from "./svg/Github.astro";
+import Email from "./svg/Email.astro";
 ---
 
 <section class="container--contact" id="contact">
@@ -33,15 +33,14 @@
         <span class="svg">
           <Github />
         </span>
-      </a>  
+      </a>
       <h3 class="contact--title">Github</h3>
     </div>
-
   </div>
 </section>
 
 <style>
-  .svg{
+  .svg {
     transition: fill 0.3s;
   }
 
@@ -49,14 +48,14 @@
     fill: rgb(209, 205, 205);
   }
 
-  .container--contact__info{
+  .container--contact__info {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
   }
-  
-  .grouping--info{
+
+  .grouping--info {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,18 +65,18 @@
   .grouping--info > a {
     text-decoration: none;
   }
-  .contact--title{
+  .contact--title {
     font-size: 2em;
     font-weight: lighter;
     margin: 20px 0;
   }
 
-  .info{
+  .info {
     font-size: 1.6em;
     letter-spacing: 3px;
   }
 
-  .svg{
+  .svg {
     fill: var(--secondary-color);
   }
 </style>
