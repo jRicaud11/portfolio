@@ -1,7 +1,6 @@
 ---
 import Github from "./svg/Github.astro";
 import Deploy from "./svg/Deploy.astro";
-import Gallery from "./svg/Gallery.astro";
 import Cross from "./svg/Cross.astro";
 import Info from "./svg/Info.astro";
 
@@ -13,9 +12,10 @@ export interface Props {
   deploy: string;
   github: string;
   gallery: Array<string>;
+  path: string;
 }
 
-const { image, title, description, techs, github, deploy, gallery } =
+const { image, title, description, techs, github, deploy, gallery, path } =
   Astro.props as Props;
 ---
 
@@ -32,12 +32,13 @@ const { image, title, description, techs, github, deploy, gallery } =
         <Deploy />
       </a>
       <div class="gallery">
-        <Info />
-        <!-- <Gallery /> -->
+        <a href={`/projects/${path}`} target="_blank">
+          <Info />
+        </a>
       </div>
     </div>
   </div>
-
+<!-- 
   <div class="project--gallery hidden" id={title}>
     <div class="gallery--container">
       <div class="container--slider">
@@ -65,7 +66,7 @@ const { image, title, description, techs, github, deploy, gallery } =
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </astro-projects>
 
 <style>
@@ -205,31 +206,31 @@ const { image, title, description, techs, github, deploy, gallery } =
     constructor() {
       super();
 
-      const slider = this.querySelector(".inner--slider") as HTMLElement | null;
-      const images = this.querySelectorAll(".img--slider");
-      const galleryBtn = this.querySelector(".gallery");
-      const gallery = this.querySelector(".project--gallery");
-      const close = this.querySelector(".closing--gallery");
+      // const slider = this.querySelector(".inner--slider") as HTMLElement | null;
+      // const images = this.querySelectorAll(".img--slider");
+      // const galleryBtn = this.querySelector(".gallery");
+      // const gallery = this.querySelector(".project--gallery");
+      // const close = this.querySelector(".closing--gallery");
 
-      galleryBtn?.addEventListener("click", () => {
-        gallery!.classList.toggle("hidden");
-      });
+      // galleryBtn?.addEventListener("click", () => {
+      //   gallery!.classList.toggle("hidden");
+      // });
 
-      close?.addEventListener("click", () => {
-        gallery!.classList.toggle("hidden");
-      });
+      // close?.addEventListener("click", () => {
+      //   gallery!.classList.toggle("hidden");
+      // });
 
-      let index = 0;
+      // let index = 0;
 
-      setInterval(function () {
-        let percentage = index * -100;
-        slider!.style.transform = "translateX(" + percentage + "%)";
-        if (index >= images.length - 1) {
-          index = 0;
-        } else {
-          index++;
-        }
-      }, 3000);
+      // setInterval(function () {
+      //   let percentage = index * -100;
+      //   slider!.style.transform = "translateX(" + percentage + "%)";
+      //   if (index >= images.length - 1) {
+      //     index = 0;
+      //   } else {
+      //     index++;
+      //   }
+      // }, 3000);
     }
   }
   customElements.define("astro-projects", AstroProjects);
