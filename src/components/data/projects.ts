@@ -78,6 +78,6 @@ export const projects: Projects[] = [
       "CSS",
     ],
     deploy: "https://mi-scusi-books.vercel.app/",
-    github: "https://github.com/jRicaud11/Mi-Scusi-Books",
+    github: "https://github.com/jRicaud11/scusi",
   },
 ];
